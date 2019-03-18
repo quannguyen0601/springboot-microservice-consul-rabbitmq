@@ -1,0 +1,2 @@
+rootProject.name = "revollet_microservice"
+include 'revollet_config_service' , 'revollet_auth_service', 'revollet_payment_service', 'revollet_gateway_service'

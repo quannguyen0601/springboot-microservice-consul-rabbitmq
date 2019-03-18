@@ -1,0 +1,35 @@
+logging:
+  level:
+    org.springframework.security: INFO
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 10000
+
+
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+          instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+          healthCheckPath: /actuator/health
+          prefer-ip-address: true
+          healthCheckInterval: 15s
+      ribbon:
+          enabled: true
+
+
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://auth-service:5001/uaa/users/current
+#
+#spring:
+#  rabbitmq:
+#    host: rabbitmq

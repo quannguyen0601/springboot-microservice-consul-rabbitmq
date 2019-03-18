@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+  eureka:
+       enabled: false
+
+zuul:
+    ignoredServices: '*'
+    host:
+         connect-timeout-millis: 20000
+         socket-timeout-millis: 20000
+
+    routes:
+        auth:
+            path: /api/auth/**
+            serviceId: auth-service
+           # stripPrefix: false
+            sensitiveHeaders:
+
+        payment:
+            path: /api/payments/**
+            serviceId: payment-service
+           # stripPrefix: true
+            sensitiveHeaders:
+
+

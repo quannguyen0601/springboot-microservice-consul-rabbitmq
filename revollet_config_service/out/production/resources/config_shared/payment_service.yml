@@ -1,0 +1,13 @@
+server:
+  port: 8084
+
+security:
+  oauth2:
+    client:
+      clientId: payment-service
+      clientSecret: payment-service-secret #define in secret
+      accessTokenUri: http://localhost:8083/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+        userInfoUri: BUGFIX

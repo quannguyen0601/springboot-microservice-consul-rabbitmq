@@ -1,0 +1,12 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.citynow.revollet'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+}

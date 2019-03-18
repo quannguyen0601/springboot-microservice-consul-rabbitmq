@@ -1,0 +1,17 @@
+server:
+  port: 8083
+
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+          dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservice-db?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true
+    username: microservice_user
+    password: 12345
+    initialization-mode: always

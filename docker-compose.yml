@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  rabbitmq:
+    image: rabbitmq:3.7-management
+    ports:
+    - '5672:5672'
+    - '15672:15672'
+    volumes:
+    - rabbitmq_data
+    environment:
+        RABBITMQ_DEFAULT_USER: my_message_broker
+        RABBITMQ_DEFAULT_PASS: my_password
