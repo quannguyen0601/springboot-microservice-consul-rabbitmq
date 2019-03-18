@@ -1,6 +1,6 @@
 HELP.md
 .gradle
-/build/
+build/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -14,7 +14,7 @@ HELP.md
 .DS_Store
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
